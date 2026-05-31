@@ -12,3 +12,9 @@ test.only("page context playwright test",async({page}) =>{
     await expect(page).toHaveTitle("Google");
 
 });
+test("browser context playwright test",async({browser}) =>{
+    const context = await browser.newContext();
+    const page = await context.newPage();
+    await page.goto("https://rahulshettyacademy.com/loginpagePractise/");
+
+});
